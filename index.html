@@ -1,0 +1,600 @@
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f9ff;
+color:#333;
+line-height:1.7;
+overflow-x:hidden;
+}
+
+/* MENU */
+nav{
+    height: 80px; /* altura da barra */
+    background-color: #B8B2B0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+list-style:none;
+}
+
+nav ul li{
+margin:0 20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00b4d8;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1800&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content{
+max-width:900px;
+animation:fadeIn 2s;
+}
+
+.hero h1{
+font-size:75px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+margin-bottom:35px;
+}
+
+.hero button{
+padding:18px 40px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:#00b4d8;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#0096c7;
+transform:scale(1.05);
+}
+
+/* SECTIONS */
+
+section{
+padding:100px 10%;
+}
+
+.container{
+background:white;
+padding:50px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+margin-bottom:50px;
+animation:fadeUp 1s;
+}
+
+h2{
+font-size:45px;
+text-align:center;
+margin-bottom:30px;
+color:#0077cc;
+}
+
+p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.image{
+width:100%;
+border-radius:20px;
+margin-top:30px;
+}
+
+.quote{
+margin-top:30px;
+padding:25px;
+background:#dff6ff;
+border-left:6px solid #0077cc;
+font-style:italic;
+border-radius:10px;
+font-size:20px;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:#0077cc;
+color:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#0096c7;
+}
+
+.card h3{
+font-size:35px;
+margin-bottom:15px;
+}
+
+/* LISTAS */
+
+ul{
+margin-top:20px;
+padding-left:20px;
+}
+
+li{
+font-size:20px;
+margin-bottom:15px;
+}
+
+/* VIDEO */
+
+.video{
+margin-top:40px;
+text-align:center;
+}
+
+.video iframe{
+width:100%;
+height:500px;
+border:none;
+border-radius:20px;
+}
+
+/* FORMULÁRIO */
+
+.form-box{
+margin-top:40px;
+}
+
+input, textarea{
+width:100%;
+padding:15px;
+margin-top:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+.submit-btn{
+margin-top:20px;
+background:#0077cc;
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.submit-btn:hover{
+background:#0096c7;
+}
+
+/* CONTACT */
+
+.contact{
+background:linear-gradient(to right,#0077cc,#00b4d8);
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.contact h2{
+color:white;
+}
+
+/* FOOTER */
+
+footer{
+background:#001d3d;
+color:white;
+text-align:center;
+padding:30px;
+font-size:18px;
+}
+.footer-logo{
+    width:auto;
+    height:100px;
+    margin-bottom:10px;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+h2{
+font-size:32px;
+}
+
+nav ul{
+flex-direction:column;
+text-align:center;
+}
+
+nav ul li{
+margin:10px 0;
+}
+
+.video iframe{
+height:250px;
+}
+
+}
+
+.logo{
+    height: 100%;
+}
+
+.logo img{
+    height: 100%;
+    width: auto;
+}
+
+</style>
+
+<!-- MENU -->
+
+<nav>
+
+<div class="logo">
+    <img src="imagens/logotipodaescola.png" alt="logotipo da escola do infante">
+</div>
+
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#conceito">Conceito</a></li>
+<li><a href="#importancia">Importância</a></li>
+<li><a href="#problemas">Problemas</a></li>
+<li><a href="#dicas">Dicas</a></li>
+<li><a href="#conclusao">Conclusão</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>Relações Interpessoais</h1>
+
+<p>
+A importância da comunicação, empatia e respeito na convivência humana.
+</p>
+
+<button onclick="document.getElementById('conceito').scrollIntoView();">
+Explorar Site
+</button>
+
+</div>
+
+</section>
+
+<!-- CONCEITO -->
+
+<section id="conceito">
+
+<div class="container">
+
+<h2>O que são Relações Interpessoais?</h2>
+
+<p>
+As relações interpessoais representam as interações entre pessoas em diferentes ambientes da sociedade.
+</p>
+
+<p>
+Estas relações envolvem comunicação, empatia, amizade, respeito e convivência saudável.
+</p>
+
+<p>
+Uma boa relação interpessoal melhora o ambiente escolar, profissional e familiar.
+</p>
+
+<div class="quote">
+“A comunicação é a chave para relações saudáveis.”
+</div>
+
+<img class="image" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1800&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- IMPORTÂNCIA -->
+
+<section id="importancia">
+
+<div class="container">
+
+<h2>Importância no Dia a Dia</h2>
+
+<p>
+As relações interpessoais são essenciais em todas as áreas da vida humana.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Escola</h3>
+<p>
+Melhoram a aprendizagem e o trabalho em equipa.
+</p>
+</div>
+
+<div class="card">
+<h3>Família</h3>
+<p>
+Fortalecem os laços emocionais e afetivos.
+</p>
+</div>
+
+<div class="card">
+<h3>Trabalho</h3>
+<p>
+Aumentam a cooperação e produtividade.
+</p>
+</div>
+
+</div>
+
+<img class="image" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1800&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- PROBLEMAS -->
+
+<section id="problemas">
+
+<div class="container">
+
+<h2>Problemas nas Relações Interpessoais</h2>
+
+<p>
+Existem vários fatores que podem prejudicar a convivência entre as pessoas.
+</p>
+
+<ul>
+<li>Bullying</li>
+<li>Falta de comunicação</li>
+<li>Conflitos pessoais</li>
+<li>Isolamento social</li>
+<li>Desrespeito</li>
+<li>Falta de empatia</li>
+</ul>
+
+<p>
+Resolver estes problemas exige diálogo, respeito e compreensão.
+</p>
+
+<img class="image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1800&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- DICAS -->
+
+<section id="dicas">
+
+<div class="container">
+
+<h2>Dicas para Melhorar as Relações</h2>
+
+<ul>
+<li>Ouvir atentamente os outros</li>
+<li>Respeitar opiniões diferentes</li>
+<li>Controlar emoções</li>
+<li>Praticar empatia</li>
+<li>Trabalhar em grupo</li>
+<li>Resolver conflitos através do diálogo</li>
+<li>Ser educado e gentil</li>
+</ul>
+
+<div class="quote">
+“O respeito é a base de qualquer relação saudável.”
+</div>
+
+<img class="image" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1800&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- VÍDEO -->
+
+<section>
+
+<div class="container">
+
+<h2>Vídeo sobre Relações Interpessoais</h2>
+
+<p>
+Vídeo explicativo sobre comunicação, empatia e convivência humana.
+</p>
+
+<div class="video">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZQ5EcCH7UEU?si=UNPUK3xrGJ1LEJUm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONCLUSÃO -->
+
+<section id="conclusao">
+
+<div class="container">
+
+<h2>Conclusão</h2>
+
+<p>
+As relações interpessoais são fundamentais para uma convivência saudável e equilibrada.
+</p>
+
+<p>
+Desenvolver comunicação, empatia e respeito melhora os ambientes escolares, familiares e profissionais.
+</p>
+
+<p>
+Boas relações contribuem para uma sociedade mais feliz, produtiva e humana.
+</p>
+
+<div class="quote">
+“Boas relações criam melhores sociedades.”
+</div>
+
+</div>
+
+</section>
+
+<!-- FORMULÁRIO -->
+
+<section>
+
+<div class="container">
+
+<h2>Opinião</h2>
+
+<p>
+Qual a relação interpessoal mais importante para si?
+</p>
+
+<div class="form-box">
+
+<input type="text" placeholder="O seu nome">
+
+<input type="email" placeholder="O seu email">
+
+<textarea rows="5" placeholder="Escreva a sua opinião"></textarea>
+
+<button class="submit-btn">
+Enviar
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2>Projeto Escolar</h2>
+
+<p>
+Tema: Relações Interpessoais
+</p>
+
+<p>
+Site desenvolvido para apresentação ao júri escolar.
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<img src="imagens/barra_site_financiamento.png" alt="Logo do projeto" class="footer-logo">
+
+<p>
+© 2026 | Projeto Escolar - Relações Interpessoais
+</p>
+
+</footer>
+
+</body>
+</html>
